@@ -6,13 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Enviar"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/et_sexo"
+        app:layout_constraintStart_toStartOf="@id/et_sexo"
+        app:layout_constraintTop_toBottomOf="@id/et_celular" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        app:layout_constraintEnd_toEndOf="@id/btn_save"
+        app:layout_constraintStart_toStartOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save"
+        android:layout_marginTop="1dp"/>
+
+    <EditText
+        android:id="@+id/et_nome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_email"
+        android:hint="Nome"
+        android:layout_margin="16dp"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/et_nome"
+        app:layout_constraintStart_toStartOf="@id/et_nome"
+        app:layout_constraintTop_toBottomOf="@+id/et_nome" />
+
+    <EditText
+        android:id="@+id/et_celular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Celular"
+        android:inputType="phone"
+        app:layout_constraintHorizontal_weight="0.7"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@id/et_nome"
+        app:layout_constraintStart_toEndOf="@id/et_sexo"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+    <EditText
+        android:id="@+id/et_sexo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Sexo"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintHorizontal_weight="0.3"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/et_celular"
+        app:layout_constraintStart_toStartOf="@id/et_nome"
+        app:layout_constraintTop_toBottomOf="@+id/et_email"
+        app:layout_constraintTop_toTopOf="@id/et_celular"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
